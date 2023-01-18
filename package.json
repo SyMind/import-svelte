@@ -4,7 +4,7 @@
   "description": "Require and transpile Svelte on the fly",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,9 @@
     "make-dir": "^3.1.0",
     "resolve-from": "^5.0.0",
     "svelte": "^3.55.1"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "rimraf": "^4.1.1"
   }
 }

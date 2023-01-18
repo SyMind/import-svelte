@@ -32,11 +32,12 @@ const filename = (source, options, version) => {
  * @params {Object} parameters
  */
 const handleCache = (directory, parameters) => {
-	const {modulePath, options, source, version} = parameters;
+	const { options, source, version } = parameters;
     const { cache, ...compilerOptions } = options;
 
 	if (!cache) {
-		return transform(source, options, modulePath);
+		const { js } = svelte.compile(source, compilerOptions);
+		return js.code;
 	}
 
 	const file = path.join(directory, filename(source, options, version));
