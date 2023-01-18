@@ -13,8 +13,8 @@ npm install import-svelte
 ```js
 const importSvelte = require('import-svelte');
 
-const App = importSvelte('./App.svelte')
-const inst = new App()
+const App = importSvelte('./App.svelte').default
+const inst = new App({ target: true })
 ```
 
 # License
