@@ -1,6 +1,6 @@
 {
   "name": "import-svelte",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Require and transpile Svelte on the fly",
   "main": "index.js",
   "scripts": {

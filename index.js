@@ -39,7 +39,7 @@ const importSvelte = (modulePath, options) => {
 		delete require.cache[modulePath];
 	}
 
-	return m;
+	return m.default;
 };
 
 module.exports = importSvelte;

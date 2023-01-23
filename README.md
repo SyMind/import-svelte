@@ -1,6 +1,6 @@
-# import-svelte
+<h1 align="center">Import Svelte</h1>
 
-Require and transpile Svelte on the fly
+<p align="center">Require and transpile Svelte on the fly.</p>
 
 # Install
 
