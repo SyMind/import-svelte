@@ -12,11 +12,6 @@ const fixturePath = name => `${__dirname}/fixtures/${name}`;
 const diskCacheDirectory = findCacheDir({name: 'import-svelte'});
 const clearDiskCache = () => rimraf.sync(diskCacheDirectory);
 
-// Hacky - delete from memory cache, so it will use the disk cache
-const deleteFromMemoryCache = name => {
-	delete require.cache[`${fixturePath(name)}.js`];
-};
-
 test('throw when module id is missing', t => {
 	t.throws(() => importSvelte(), TypeError, 'Expected a string');
 });

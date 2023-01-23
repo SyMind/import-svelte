@@ -1,13 +1,10 @@
-const path = require('path');
 const fs = require('fs');
-const resolveFrom = require('resolve-from');
-const callerPath = require('caller-path');
 const cache = require('./cache');
 const { version } = require('./package.json');
 
-const importSvelte = (id, options) => {
-	if (typeof id !== 'string') {
-		throw new TypeError('The "id" argument must be of type string. Received ' + typeof id);
+const importSvelte = (modulePath, options) => {
+	if (typeof modulePath !== 'string') {
+		throw new TypeError('The "modulePath" argument must be of type string. Received ' + typeof id);
 	}
 
 	options = {
@@ -15,8 +12,6 @@ const importSvelte = (id, options) => {
 		...options,
         format: 'cjs'
 	};
-
-	const modulePath = resolveFrom(path.dirname(callerPath()), id);
 
 	if (!options.cache) {
 		delete require.cache[modulePath];
