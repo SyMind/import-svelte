@@ -19,4 +19,4 @@ const inst = new App({ target: true })
 
 # License
 
-[LICENSE](./LICENSE)
+[MIT](./LICENSE)
